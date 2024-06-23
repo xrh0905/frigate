@@ -7,13 +7,13 @@ import { REVIEW_PADDING, ReviewSegment } from "@/types/review";
 import { useNavigate } from "react-router-dom";
 import { RecordingStartingPoint } from "@/types/record";
 import axios from "axios";
-import { VideoPreview } from "../player/PreviewThumbnailPlayer";
 import { isCurrentHour } from "@/utils/dateUtil";
 import { useCameraPreviews } from "@/hooks/use-camera-previews";
 import { baseUrl } from "@/api/baseUrl";
+import { VideoPreview } from "../preview/ScrubbablePreview";
 import { useApiHost } from "@/api";
-import { isSafari } from "react-device-detect";
 import { usePersistence } from "@/hooks/use-persistence";
+import { isSafari } from "react-device-detect";
 
 type AnimatedEventCardProps = {
   event: ReviewSegment;
